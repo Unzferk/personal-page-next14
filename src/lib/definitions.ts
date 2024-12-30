@@ -4,4 +4,9 @@ export type CardCvInfo = {
   position: string
   accomplishments: string
   tools: string
+  imgs?: CardImgs[]
+}
+
+export type CardImgs = {
+  img: string
 }
