@@ -1,5 +1,5 @@
 import { type Metadata } from 'next'
-
+import { ThemeProvider } from '@/components/ThemeProvider'
 import '@/styles/tailwind.css'
 
 export const metadata: Metadata = {
@@ -31,7 +31,15 @@ export default function RootLayout({
         />
       </head>
       <body className="flex min-h-full">
-        <div className="w-full">{children}</div>
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+          disableTransitionOnChange
+          themes={['dark', 'light']}
+        >
+          <div className="w-full">{children}</div>
+        </ThemeProvider>
       </body>
     </html>
   )
