@@ -37,7 +37,7 @@ export default function MainLayout({
     <>
       <header className="lg:fixed lg:inset-y-0 lg:left-0 lg:flex lg:w-112 lg:items-start lg:overflow-y-auto xl:w-120">
         <div className="hidden lg:sticky lg:top-0 lg:flex lg:w-16 lg:flex-none lg:items-center lg:whitespace-nowrap lg:py-12 lg:text-sm lg:leading-7 lg:[writing-mode:vertical-rl]">
-          <span className="text-muted-foreground font-mono">
+          <span className="font-mono text-muted-foreground">
             Software developer
           </span>
           <span className="mt-6 flex gap-6 font-bold">
@@ -53,7 +53,7 @@ export default function MainLayout({
             ))}
           </span>
         </div>
-        <div className="lg:border-muted relative z-10 mx-auto px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:px-8 lg:py-12 xl:px-12">
+        <div className="relative z-10 mx-auto bg-card px-4 pb-4 pt-10 sm:px-6 md:max-w-2xl md:px-4 lg:min-h-full lg:flex-auto lg:border-x lg:border-muted lg:px-8 lg:py-12 xl:px-12">
           <Link
             href="/"
             className="relative mx-auto block w-48 overflow-hidden rounded-lg bg-slate-200 shadow-xl shadow-slate-200 sm:w-64 sm:rounded-xl lg:w-auto lg:rounded-2xl"
@@ -69,8 +69,10 @@ export default function MainLayout({
             <div className="absolute inset-0 rounded-lg ring-1 ring-inset ring-black/10 sm:rounded-xl lg:rounded-2xl" />
           </Link>
           <div className="mt-10 text-center lg:mt-12 lg:text-left">
-            <p className="text-xl font-bold">Fernando Unzueta</p>
-            <p className="mt-3 text-lg font-medium leading-8">
+            <p className="text-xl font-bold text-primary-foreground">
+              Fernando Unzueta
+            </p>
+            <p className="mt-3 text-lg font-medium leading-8 text-primary-foreground">
               I'm a full stack web developer using Java, JS and TS technologies.
               Let's grow up together and become someone who can help others!
             </p>
@@ -82,47 +84,51 @@ export default function MainLayout({
                 colors={['fill-indigo-300', 'fill-blue-300']}
                 className="h-2.5 w-2.5"
               />
-              <span className="text-muted-foreground ml-2.5">Resources</span>
+              <span className="ml-2.5 text-secondary-foreground">
+                Resources
+              </span>
             </h2>
             <div className="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
             <ul
               role="list"
-              className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-slate-700 sm:gap-8 lg:flex-col lg:gap-4"
+              className="mt-4 flex justify-center gap-10 text-base font-medium leading-7 text-secondary-foreground sm:gap-8 lg:flex-col lg:gap-4"
             >
-              <li className="flex">
+              <li key="cv" className="flex">
                 <Link
-                  href="/"
-                  className="text-muted-foreground group flex items-center"
+                  href="/docs/FernandoUnzuetaCV2023.pdf"
+                  className="group flex items-center text-secondary-foreground"
                   aria-label="cv"
+                  locale={false}
+                  target="_blank"
                 >
                   <FileUser size={24} />
-                  <span className="text-muted-foreground hidden sm:ml-3 sm:block">
+                  <span className="hidden text-secondary-foreground sm:ml-3 sm:block">
                     CV
                   </span>
                 </Link>
               </li>
 
-              <li className="flex">
+              <li key="git" className="flex">
                 <Link
                   href="https://github.com/Unzferk"
-                  className="text-muted-foreground group flex items-center"
+                  className="group flex items-center text-secondary-foreground"
                   aria-label="github"
                 >
                   <Github size={24} />
-                  <span className="text-muted-foreground hidden sm:ml-3 sm:block">
+                  <span className="hidden text-secondary-foreground sm:ml-3 sm:block">
                     Github
                   </span>
                 </Link>
               </li>
 
-              <li className="flex">
+              <li key="in" className="flex">
                 <Link
                   href="https://linkedin.com/in/rudy-fernando-unzueta-perez-a2640822b"
-                  className="text-muted-foreground group flex items-center"
+                  className="group flex items-center text-secondary-foreground"
                   aria-label="linkedin"
                 >
                   <Linkedin size={24} />
-                  <span className="text-muted-foreground hidden sm:ml-3 sm:block">
+                  <span className="hidden text-secondary-foreground sm:ml-3 sm:block">
                     LinkedIn
                   </span>
                 </Link>
