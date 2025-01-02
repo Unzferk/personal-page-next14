@@ -2,7 +2,9 @@ export type CardCvInfo = {
   title: string
   year?: string
   position: string
-  accomplishments: string
+  about: string
+  frontend?: string
+  backend?: string
   tools: string
   imgs?: CardImgs[]
 }

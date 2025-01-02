@@ -5,6 +5,7 @@ import { TinyWaveFormIcon } from '@/components/TinyWaveFormIcon'
 import { Waveform } from '@/components/Waveform'
 import profileImage from '@/images/adsprofile.jpeg'
 import { FileUser, Linkedin, Github } from 'lucide-react'
+import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 function PersonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -14,24 +15,18 @@ function PersonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   )
 }
 
-export default function MainLayout({
-  children,
-}: {
+type Props = {
+  params: { locale: string }
   children: React.ReactNode
-}) {
-  let hosts = ['Fernando Unzueta']
+}
 
-  const downloadCV = () => {
-    fetch('FernandoUnzuetaCV2023.docx.pdf').then((response) => {
-      response.blob().then((blob) => {
-        const fileURL = window.URL.createObjectURL(blob)
-        let alink = document.createElement('a')
-        alink.href = fileURL
-        alink.download = 'FernandoUnzuetaCV2023.pdf'
-        alink.click()
-      })
-    })
-  }
+export default async function MainLayout({
+  params: { locale },
+  children,
+}: Props) {
+  let hosts = ['Fernando Unzueta']
+  setRequestLocale(locale)
+  const t = await getTranslations('HomeLayout')
 
   return (
     <>
@@ -73,8 +68,7 @@ export default function MainLayout({
               Fernando Unzueta
             </p>
             <p className="mt-3 text-lg font-medium leading-8 text-primary-foreground">
-              I'm a full stack web developer using Java, JS and TS technologies.
-              Let's grow up together and become someone who can help others!
+              {t('description')}
             </p>
           </div>
           {/* <AboutSection className="mt-12 hidden lg:block" /> */}
@@ -85,7 +79,7 @@ export default function MainLayout({
                 className="h-2.5 w-2.5"
               />
               <span className="ml-2.5 text-secondary-foreground">
-                Resources
+                {t('resources')}
               </span>
             </h2>
             <div className="h-px bg-gradient-to-r from-slate-200/0 via-slate-200 to-slate-200/0 lg:hidden" />
