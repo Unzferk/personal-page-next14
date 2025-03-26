@@ -1,7 +1,7 @@
 import CvCard from '@/components/custom/CvCard'
 import { LanguageToggle } from '@/components/LanguageToggle'
 import { ThemeToggle } from '@/components/ThemeToggle'
-import { curriculum } from '@/data/curriculum'
+import { curriculum, curriculumES } from '@/data/curriculum'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
 
 type Props = {
@@ -22,10 +22,10 @@ export default async function Home({ params: { locale } }: Props) {
           <ThemeToggle />
         </div>
       </div>
-      <div className="flex flex-col gap-y-8 divide-y border p-2 sm:mt-4 lg:mt-8">
-        {curriculum.map((item) => (
-          <CvCard key={item.title} cv={item} />
-        ))}
+      <div className="flex flex-col gap-y-8 divide-y p-2 sm:mt-4 lg:mt-8">
+        {locale === 'en'
+          ? curriculum.map((item) => <CvCard key={item.title} cv={item} />)
+          : curriculumES.map((item) => <CvCard key={item.title} cv={item} />)}
       </div>
     </div>
   )
