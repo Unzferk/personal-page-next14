@@ -6,6 +6,9 @@ import { Waveform } from '@/components/Waveform'
 import profileImage from '@/images/adsprofile.jpeg'
 import { FileUser, Linkedin, Github } from 'lucide-react'
 import { getTranslations, setRequestLocale } from 'next-intl/server'
+import { LanguageToggle } from '@/components/LanguageToggle'
+import { ThemeToggle } from '@/components/ThemeToggle'
+import NavBar from '@/components/home/Navbar'
 
 function PersonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
@@ -133,7 +136,18 @@ export default async function MainLayout({
       </header>
       <main className="border-t border-slate-200 lg:relative lg:mb-28 lg:ml-112 lg:border-t-0 xl:ml-120">
         <Waveform className="absolute left-0 top-0 h-20 w-full" />
-        <div className="relative">{children}</div>
+        <div className="relative">
+          <div className="pb-12 pt-16 sm:pb-4 lg:pt-12">
+            <div className="mb-3 flex h-full w-full flex-row justify-between px-6">
+              <NavBar />
+              <div className="flex flex-row items-center gap-3">
+                <LanguageToggle />
+                <ThemeToggle />
+              </div>
+            </div>
+            {children}
+          </div>
+        </div>
       </main>
       <footer className="border-t border-slate-200 bg-slate-50 py-10 pb-40 sm:py-16 sm:pb-32 lg:hidden">
         <div className="mx-auto px-4 sm:px-6 md:max-w-2xl md:px-4">
