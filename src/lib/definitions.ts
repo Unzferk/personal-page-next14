@@ -9,6 +9,12 @@ export type CardCvInfo = {
   imgs?: CardImgs[]
 }
 
+export type CertificationInfo = {
+  title: string
+  image: string
+  link: string
+}
+
 export type CardImgs = {
   img: string
 }
