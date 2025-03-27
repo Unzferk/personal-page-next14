@@ -1,7 +1,7 @@
 import { redirect } from 'next/navigation'
 
 const LocalePage = () => {
-  redirect('/home')
+  redirect('/home/projects')
 }
 
 export default LocalePage

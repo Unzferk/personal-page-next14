@@ -1,7 +1,9 @@
 'use client'
 
 import { Link, usePathname } from '@/i18n/routing'
+import { useTranslations } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { useEffect, useState } from 'react'
 
 const tabs = [
   { name: 'Projects', href: '/home/projects' },
@@ -16,6 +18,7 @@ function classNames(...classes: any) {
 export default function NavBar() {
   const pathname = usePathname()
   const router = useRouter()
+  const t = useTranslations('NavigationBar')
 
   const handleOnChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const path = tabs.find((tab) =>
@@ -24,14 +27,19 @@ export default function NavBar() {
     router.push(path?.href || '#')
   }
 
+  const [currentTab, setCurrentTab] = useState('')
+
+  useEffect(() => {
+    const current = tabs.find((tab) => pathname.includes(tab.href))?.name ?? ''
+    setCurrentTab(current || '')
+  }, [pathname])
+
   return (
     <div className="mx-4 w-full justify-between">
       <div className="flex w-full flex-wrap justify-between sm:hidden">
         <select
           onChange={handleOnChange}
-          defaultValue={
-            tabs.find((tab) => pathname.includes(tab.href))?.href ?? ''
-          }
+          value={currentTab}
           aria-label="Select a tab"
           className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pl-3 pr-8 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:text-primary focus:outline-2 focus:-outline-offset-2"
         >
@@ -48,6 +56,7 @@ export default function NavBar() {
               <Link
                 key={tab.name}
                 href={tab.href}
+                onClick={() => setCurrentTab(tab.name)}
                 aria-current={pathname.includes(tab.href) ? 'page' : undefined}
                 className={classNames(
                   pathname.includes(tab.href)
@@ -56,7 +65,7 @@ export default function NavBar() {
                   'w-1/4 border-b-2 px-1 py-4 text-center text-sm font-medium',
                 )}
               >
-                {tab.name}
+                {t(tab.name.toLowerCase())}
               </Link>
             ))}
           </nav>

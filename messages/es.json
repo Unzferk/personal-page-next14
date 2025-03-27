@@ -53,5 +53,10 @@
   },
   "VerifyButton": {
     "title": "Verificar"
+  },
+  "NavigationBar": {
+    "projects": "Proyectos",
+    "certifications": "Certificaciones",
+    "others": "Otros"
   }
 }
