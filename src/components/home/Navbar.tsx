@@ -1,8 +1,8 @@
 'use client'
 
-import { Link, usePathname } from '@/i18n/routing'
+import { Link, usePathname, useRouter } from '@/i18n/routing'
 import { useTranslations } from 'next-intl'
-import { useRouter } from 'next/navigation'
+
 import { useEffect, useState } from 'react'
 
 const tabs = [
@@ -34,6 +34,11 @@ export default function NavBar() {
     setCurrentTab(current || '')
   }, [pathname])
 
+  const translatedTabs = tabs.map((tab) => ({
+    ...tab,
+    translatedName: t(tab.name.toLowerCase()),
+  }))
+
   return (
     <div className="mx-4 w-full justify-between">
       <div className="flex w-full flex-wrap justify-between sm:hidden">
@@ -43,8 +48,10 @@ export default function NavBar() {
           aria-label="Select a tab"
           className="col-start-1 row-start-1 w-full appearance-none rounded-md bg-white py-2 pl-3 pr-8 text-base text-gray-900 outline-1 -outline-offset-1 outline-gray-300 focus:text-primary focus:outline-2 focus:-outline-offset-2"
         >
-          {tabs.map((tab) => (
-            <option key={tab.name}>{tab.name}</option>
+          {translatedTabs.map((tab) => (
+            <option key={tab.name} value={tab.name}>
+              {tab.translatedName}
+            </option>
           ))}
         </select>
       </div>
@@ -52,7 +59,7 @@ export default function NavBar() {
       <div className="hidden sm:block">
         <div className="border-b border-gray-200">
           <nav aria-label="Tabs" className="-mb-px flex">
-            {tabs.map((tab) => (
+            {translatedTabs.map((tab) => (
               <Link
                 key={tab.name}
                 href={tab.href}
@@ -65,7 +72,7 @@ export default function NavBar() {
                   'w-1/4 border-b-2 px-1 py-4 text-center text-sm font-medium',
                 )}
               >
-                {t(tab.name.toLowerCase())}
+                {tab.translatedName}
               </Link>
             ))}
           </nav>
