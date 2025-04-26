@@ -2,8 +2,31 @@ import { CardCvInfo } from '@/lib/definitions'
 
 export const curriculum: CardCvInfo[] = [
   {
+    title: 'Education System - Sincpro',
+    year: '2024',
+    position: 'Software Developer',
+    about:
+      'It is a SaaS project with different functions to help manage administrative processes in an institution.',
+    frontend:
+      'Contributions to the frontend include a **migration** from **Next.js 13** to **Next.js 14**, as well as **updates** to the visual appearance of the **user interface**.',
+    backend: 'Collaboration in the creation of **documentation**.',
+    tools: 'NextJS, NestJS, PostgreSQL, GIT',
+  },
+  {
+    title: 'Ecommerce - Truextend/Hinda',
+    year: '2023',
+    position: 'Software Developer **(Outsourcing)**',
+    about:
+      'It is an **ecommerce project** where the clients have an **entire platform to manage** and offer their **products** including shipping.',
+    frontend:
+      'The frontend collaborations were **giving support and fixing bugs in their functionalities** like, fix button behaviors, refactor different card components showing and hiding data based on the role user and other support issues.',
+    backend:
+      'Same as frontend work, my role was basically give support and fix bugs related with the components I was working on.',
+    tools: 'AngularJS, .NET Framework 4.8, PostgreSQL, GIT, Jira.',
+  },
+  {
     title: 'Metrics - Truextend/Numecent',
-    year: '',
+    year: '2023',
     position: 'Software Developer **(Outsourcing)**',
     about:
       'This is a project designed to ***visualize analysis of Numecent systems***, such as user statuses, applications, services, and servers.',
@@ -15,20 +38,8 @@ export const curriculum: CardCvInfo[] = [
       'Java 8, Tomcat 8.5, Grafana, Serverless Framework, AWS CLI ECR-ECS-ELB-Route53, Cloudwatch, Typescript, Ivy, Ant, npm, Docker, JUnit, JMeter, Mysql, GIT, GitLab, Jira, Eclipse IDE.',
   },
   {
-    title: 'Ecommerce - Truextend/Hinda',
-    year: '',
-    position: 'Software Developer **(Outsourcing)**',
-    about:
-      'It is a **ecommerce project** where the clients has an **entire platform to manage** and offer their **products** including shipping.',
-    frontend:
-      'The frontend collaborations were **giving support and fix bugs in their functionallities** like, fix button behaviors, refactor different card components showing and hidding data based in the role user and other support issues.',
-    backend:
-      'Same as frontend work, my role was basically give support and fix bugs related with the components I was working on.',
-    tools: 'AngularJS, .NET Framework 4.8, PostgreSQL, GIT, Jira.',
-  },
-  {
     title: 'Visual Device Emulator - Truextend/GlobeRanger',
-    year: '',
+    year: '2023',
     position: 'Software Developer **(Outsourcing)**',
     about: 'It is an ***IoT device emulator***.',
     frontend:
@@ -39,8 +50,8 @@ export const curriculum: CardCvInfo[] = [
       '.NET Framework 4.8, Infragistics, DevExpress 22.1.5, Azure DevOps, Wix Toolset, GIT, Jira.',
   },
   {
-    title: ' TrueRewards - Truextend',
-    year: '',
+    title: 'TrueRewards - Truextend',
+    year: '2022',
     position: 'Software Developer',
     about:
       'It is a web application service focused on ***managing rewards*** offered by the company based on points earned by registered users.',
@@ -70,7 +81,7 @@ export const curriculum: CardCvInfo[] = [
   },
   {
     title: 'Time and Attendance - Truextend',
-    year: '',
+    year: '2022',
     position: 'Software Developer',
     about:
       'It is a web application service focused on ***managing employee vacation requests***.',
@@ -94,7 +105,7 @@ export const curriculum: CardCvInfo[] = [
   },
   {
     title: ' Projects Microservice - Truextend',
-    year: '',
+    year: '2021',
     position: 'Junior Developer',
     about:
       'It is an API and ***microservice designed to store and manage information*** about users and the projects they are assigned to.',
@@ -116,8 +127,31 @@ export const curriculumES: CardCvInfo[] = [
   //   tools: '',
   // },
   {
+    title: 'EducaSystem - Sincpro',
+    year: '2024',
+    position: 'Software Developer',
+    about:
+      'Es un proyecto SaaS con diferentes funciones para ayudar la gestión de los procesos administrativos en una institución',
+    frontend:
+      'Los aportes dentro del frontend incluyen en una **migración** de **nextjs13** a **nextjs14**, además de **actualizaciones** de aspecto visual en la **interfaz** de usuario como ser la gestión de alumnos, calificaciones y materias',
+    backend: 'Colaboración en la creación de **documentación**',
+    tools: 'NextJS, NestJS, PostgreSQL, GIT',
+  },
+  {
+    title: 'Ecommerce - Truextend/Hinda',
+    year: '2023',
+    position: 'Software Developer **(Outsourcing)**',
+    about:
+      'Es un **proyecto de comercio electrónico** donde los clientes tienen una **plataforma completa para administrar** y ofrecer sus **productos**, incluido el envío',
+    frontend:
+      'Las colaboraciones de frontend fueron **dar soporte y corregir errores en sus funcionalidades** como, por ejemplo, corregir comportamientos de botones, refactorizar diferentes componentes de tarjetas que muestran y ocultan datos según el rol del usuario y otros problemas de soporte.',
+    backend:
+      'Al igual que el trabajo de frontend, mi función era básicamente brindar soporte y corregir errores relacionados con los componentes en los que estaba trabajando.',
+    tools: 'AngularJS, .NET Framework 4.8, PostgreSQL, GIT, Jira.',
+  },
+  {
     title: 'Metrics - Truextend/Numecent',
-    year: '',
+    year: '2023',
     position: 'Software Developer **(Outsourcing)**',
     about:
       ' Es un proyecto destinado a **visualizar análisis de los sistemas de Numecent** como estados de usuarios, aplicaciones, servicios y servidores.',
@@ -129,32 +163,20 @@ export const curriculumES: CardCvInfo[] = [
       'Java 8, Tomcat 8.5, Grafana, Serverless Framework, AWS CLI ECR-ECS-ELB-Route53, Cloudwatch, Typescript, Ivy, Ant, npm, Docker, JUnit, JMeter, Mysql, GIT, GitLab, Jira, Eclipse IDE.',
   },
   {
-    title: 'Ecommerce - Truextend/Hinda',
-    year: '',
-    position: 'Software Developer **(Outsourcing)**',
-    about:
-      'Es un **proyecto de comercio electrónico** donde los clientes tienen una **plataforma completa para administrar** y ofrecer sus **productos**, incluido el envío',
-    frontend:
-      'Las colaboraciones de frontend fueron **dar soporte y corregir errores en sus funcionalidades** como, por ejemplo, corregir comportamientos de botones, refactorizar diferentes componentes de tarjetas que muestran y ocultan datos según el rol del usuario y otros problemas de soporte.',
-    backend:
-      'Al igual que el trabajo de frontend, mi función era básicamente brindar soporte y corregir errores relacionados con los componentes en los que estaba trabajando.',
-    tools: 'AngularJS, .NET Framework 4.8, PostgreSQL, GIT, Jira.',
-  },
-  {
     title: 'Visual Device Emulator - Truextend/GlobeRanger',
-    year: '',
+    year: '2023',
     position: 'Software Developer **(Outsourcing)**',
     about: ' Es un **emulador de dispositivos IOT.**',
     frontend:
       'En **frondend** se trabajo en la **migración de la apariencia** de la interfaz de usuario de **infragistics y windows forms a DevExpress.**',
     backend:
-      'Trabajé en el archivo YAML para la canalización CI/CD en Azure DevOps y creé el instalador MS con Wix como parte de la tarea de DevOps.',
+      'Trabajé en el archivo YAML para el pipeline CI/CD en Azure DevOps y creé el instalador MS con Wix como parte de la tarea de DevOps.',
     tools:
       '.NET Framework 4.8, Infragistics, DevExpress 22.1.5, Azure DevOps, Wix Toolset, GIT, Jira.',
   },
   {
     title: ' TrueRewards - Truextend',
-    year: '',
+    year: '2022',
     position: 'Software Developer',
     about:
       ' Es un servicio de aplicación web centrado en **gestionar las recompensas** ofrecidas por la empresa **en función de los puntos** obtenidos por los usuarios registrados.',
@@ -184,7 +206,7 @@ export const curriculumES: CardCvInfo[] = [
   },
   {
     title: 'Time and Attendance - Truextend',
-    year: '',
+    year: '2022',
     position: 'Software Developer',
     about:
       ' Es un servicio de aplicación web enfocado a la **gestión de solicitudes de vacaciones** de los empleados.',
@@ -208,7 +230,7 @@ export const curriculumES: CardCvInfo[] = [
   },
   {
     title: ' Projects Microservice - Truextend',
-    year: '',
+    year: '2021',
     position: 'Junior Developer',
     about:
       'Es una **API y microservicio** para guardar y administrar información sobre los usuarios y proyectos donde están asignados.',

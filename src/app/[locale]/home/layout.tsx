@@ -92,7 +92,7 @@ export default async function MainLayout({
             >
               <li key="cv" className="flex">
                 <Link
-                  href="/docs/FernandoUnzuetaCV2023.pdf"
+                  href="/docs/FernandoUnzuetaCVPage.pdf"
                   className="group flex items-center text-secondary-foreground"
                   aria-label="cv"
                   locale={false}
@@ -110,6 +110,7 @@ export default async function MainLayout({
                   href="https://github.com/Unzferk"
                   className="group flex items-center text-secondary-foreground"
                   aria-label="github"
+                  target="_blank"
                 >
                   <Github size={24} />
                   <span className="hidden text-secondary-foreground sm:ml-3 sm:block">
@@ -123,6 +124,7 @@ export default async function MainLayout({
                   href="https://linkedin.com/in/rudy-fernando-unzueta-perez-a2640822b"
                   className="group flex items-center text-secondary-foreground"
                   aria-label="linkedin"
+                  target="_blank"
                 >
                   <Linkedin size={24} />
                   <span className="hidden text-secondary-foreground sm:ml-3 sm:block">

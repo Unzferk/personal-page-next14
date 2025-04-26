@@ -18,7 +18,11 @@ export default function CvCard({ cv }: { cv: CardCvInfo }) {
         className="header-card cursor-pointer bg-secondary px-4 py-5 sm:px-6"
         onClick={toggleBody}
       >
-        <CardTitle className="text-xl"> {`${cv.title} ${cv.year}`}</CardTitle>
+        <CardTitle className="flex justify-between text-xl">
+          {`${cv.title}`}
+          {/* <div className="text-xl">{`${cv.title}`}</div> */}
+          <div className="text-xl">{`${cv.year}`}</div>
+        </CardTitle>
         <CardDescription className="text-primary">
           <Markdown>{cv.position}</Markdown>
         </CardDescription>
