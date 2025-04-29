@@ -1,5 +1,21 @@
 import CertificationCard from '@/components/custom/CertificationCard'
 import { CertificationInfo } from '@/lib/definitions'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Fernando Unzueta - Certifications',
+  description:
+    'Fernando Unzueta - The list of my certifications which aproves and verify my knowledge on the different tech stacks',
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Fernando Unzueta - Certifications Section',
+    description: "Explore Fernando Unzueta's Certifications section.",
+    url: `${process.env.NEXT_PUBLIC_PAGE_URL}/en/home/certifications`,
+  },
+}
 
 const certifiactions: CertificationInfo[] = [
   {

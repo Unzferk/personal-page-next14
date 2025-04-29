@@ -9,6 +9,30 @@ import { getTranslations, setRequestLocale } from 'next-intl/server'
 import { LanguageToggle } from '@/components/LanguageToggle'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import NavBar from '@/components/home/Navbar'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Fernando Unzueta - Portfolio',
+  description:
+    'Fernando Unzueta - Review Portfolio with JS technologies like React, NextJS, NestJS, NodeJS, Java, Javascript, Typescript and more',
+  keywords: [
+    'Fernando Unzueta',
+    'Fernando Unzueta Developer',
+    'Fernando Unzueta React',
+    'Fernando Unzueta dev',
+    'devunz',
+    'FernandoUnzueta',
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: 'Fernando Unzueta - Portfolio',
+    description: "Explore Fernando Unzueta's portfolio.",
+    url: `${process.env.NEXT_PUBLIC_PAGE_URL}/en/home/projects`,
+  },
+}
 
 function PersonIcon(props: React.ComponentPropsWithoutRef<'svg'>) {
   return (
