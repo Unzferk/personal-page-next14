@@ -19,6 +19,11 @@ export const metadata: Metadata = {
 
 const certifiactions: CertificationInfo[] = [
   {
+    title: `Bachelor's Degree`,
+    image: '/images/apostillatitulo.png',
+    link: 'https://www.rree.gob.bo/VerificaApostilla/',
+  },
+  {
     title: 'AWS Cloud Practitioner',
     image: '/images/aws-cp.png',
     link: 'https://www.credly.com/badges/045c827b-59fd-47f4-978f-80c46f8b9ac2/public_url',

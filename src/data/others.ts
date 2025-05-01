@@ -87,6 +87,30 @@ export const others: CardCvInfo[] = [
       },
     ],
   },
+  {
+    title: 'Previous Personal Page',
+    year: '',
+    position: 'Software Developer',
+    about: 'Previous personal portfolio',
+    frontend:
+      'The frontend includes the **design** and **development** of the user interface',
+    backend: '',
+    tools: 'React, Material UI',
+    imgs: [
+      {
+        img: '/images/pp2.png',
+      },
+      {
+        img: '/images/pp4.png',
+      },
+      {
+        img: '/images/pp5.png',
+      },
+      {
+        img: '/images/pp6.png',
+      },
+    ],
+  },
 ]
 
 export const othersES: CardCvInfo[] = [
@@ -174,6 +198,30 @@ export const othersES: CardCvInfo[] = [
       },
       {
         img: '/images/admin3.png',
+      },
+    ],
+  },
+  {
+    title: 'Pagina Personal Anterior',
+    year: '',
+    position: 'Software Developer',
+    about: 'Portafolio personal anterior',
+    frontend:
+      'El frontend incluye el **diseño** y **desarrollo** de la interfaz de usuario',
+    backend: '',
+    tools: 'React, Material UI',
+    imgs: [
+      {
+        img: '/images/pp2.png',
+      },
+      {
+        img: '/images/pp4.png',
+      },
+      {
+        img: '/images/pp5.png',
+      },
+      {
+        img: '/images/pp6.png',
       },
     ],
   },

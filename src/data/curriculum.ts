@@ -8,7 +8,7 @@ export const curriculum: CardCvInfo[] = [
     about:
       'It is a SaaS project with different functions to help manage administrative processes in an institution.',
     frontend:
-      'Contributions to the frontend include a **migration** from **Next.js 13** to **Next.js 14**, as well as **updates** to the visual appearance of the **user interface**.',
+      'Contributions to the frontend include a **migration** from **Next.js 13** to **Next.js 14**, as well as **updates** and **refactors** to the visual appearance of the **user interface**.',
     backend: 'Collaboration in the creation of **documentation**.',
     tools: 'NextJS, NestJS, PostgreSQL, GIT',
   },
@@ -133,7 +133,7 @@ export const curriculumES: CardCvInfo[] = [
     about:
       'Es un proyecto SaaS con diferentes funciones para ayudar la gestión de los procesos administrativos en una institución',
     frontend:
-      'Los aportes dentro del frontend incluyen en una **migración** de **nextjs13** a **nextjs14**, además de **actualizaciones** de aspecto visual en la **interfaz** de usuario como ser la gestión de alumnos, calificaciones y materias',
+      'Los aportes dentro del frontend incluyen en una **migración** de **nextjs13** a **nextjs14**, además de **actualizaciones** y **refactorizaciones** de aspecto visual en la **interfaz** de usuario como ser la gestión de alumnos, calificaciones y materias',
     backend: 'Colaboración en la creación de **documentación**',
     tools: 'NextJS, NestJS, PostgreSQL, GIT',
   },

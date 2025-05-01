@@ -5,9 +5,17 @@ import { Link } from '@/i18n/routing'
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
 
-export function ImageViewer({ image }: { image: string }) {
+export function ImageViewer({
+  image,
+  className,
+}: {
+  image: string
+  className: string
+}) {
   return (
-    <Card className="flex aspect-square flex-col items-center justify-center bg-secondary">
+    <Card
+      className={`flex aspect-square flex-col items-center justify-center bg-secondary ${className}`}
+    >
       <CardContent>
         <Zoom>
           <img

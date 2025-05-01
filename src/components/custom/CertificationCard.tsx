@@ -36,7 +36,10 @@ export default function CertificationCard({
       >
         {certification.image && (
           <div className="flex w-full flex-col items-center justify-center gap-y-4">
-            <ImageViewer image={certification.image} />
+            <ImageViewer
+              image={certification.image}
+              className="h-[300px] overflow-y-hidden"
+            />
             <CardFooter className="text-center text-primary">
               <Button variant="outline">
                 <Link title="Verify!" href={certification.link} target="_blank">
